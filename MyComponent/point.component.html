@@ -1,0 +1,53 @@
+<section>
+    <form class="b-section">
+        <fieldset class="b-fieldset__size">
+            <legend>Значення X</legend>
+            <label>Xn=
+                <input type="text" id="xn" value="-5" class="b-input__size" #Inputxn>
+            </label>
+            <label>Xk=
+                <input type="text" id="xk" value="5" class="b-input__size" #Inputxk>
+            </label>
+            <label>Hx=
+                <input type="text" id="hx" value="2" class="b-input__size" #Inputhx>
+            </label>
+        </fieldset>
+        <fieldset class="b-fieldset__size">
+            <legend>Значення Y</legend>
+            <label>Yn=
+                <input type="text" id="yn" value="-5" class="b-input__size" #Inputyn>
+            </label>
+            <label>Yk=
+                <input type="text" id="yk" value="5" class="b-input__size" #Inputyk>
+            </label>
+            <label>Hy=
+                <input type="text" id="hy" value="2" class="b-input__size" #Inputhy>
+            </label>
+        </fieldset>
+        <fieldset class="b-fieldset__size">
+            <legend>Значення R</legend>
+            <label>R=
+                <input type="text" id="r" value="3" #Inputr>
+            </label>
+        </fieldset>
+    </form>
+    <button class="b-button" (click)="setall(Inputxn.value, Inputxk.value, Inputhx.value, Inputyn.value, Inputyk.value, Inputhy.value, Inputr.value)">
+        Розрахунок
+    </button>
+    <table class="b-table">
+        <tbody>
+            <tr>
+                <td>X</td>
+                <td *ngFor="let xx of xar">{{xx}} </td>
+            </tr>
+            <tr>
+                <td>Y</td>
+                <td *ngFor="let yy of yar">{{yy}} </td>
+            </tr>
+            <tr>
+                <td>Належить</td>
+                <td *ngFor="let bb of belar" [ngStyle]="{backgroundColor: getColor(bb)}">{{bb}}</td>
+            </tr>
+        </tbody>
+    </table>
+</section>

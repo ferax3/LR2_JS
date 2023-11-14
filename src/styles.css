@@ -1,0 +1,58 @@
+html{
+    scroll-behavior: smooth;
+}
+body{
+    background-color: aqua;
+    margin: 0;
+}
+h1,h2,label,legend{
+    font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+}
+.b-header{
+    text-align: center;
+    border-bottom: 3px solid #000; /* Встановіть потрібний колір і ширину границі */
+}
+.b-imgR__background{
+    background-image: url(img/diagram.png);
+    background-size: cover;
+    width: 360px;
+    height: 360px;
+    mix-blend-mode: multiply;
+    display:inline-block;
+}
+.b-section{
+    display: grid;
+    justify-items: left;
+    align-items: center;
+    grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
+    grid-column-gap: 5px;
+    opacity: 1;
+}
+.b-fieldset__size{
+    width:85%
+}
+.b-input__size{
+    width: 20%;
+    margin:10px 5px;
+    text-align: left;
+}
+.b-button{
+    background-color: rgb(102, 76, 175, 0.5);
+    border: none;
+    color: white;
+    padding: 5px 5px 5px 5px;
+    margin: 5px 10px;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    font-size: 16px;
+}
+.b-button:hover{
+    background-color: rgb(102, 76, 175);
+    cursor: pointer;
+}
+.b-table{
+    border-style:solid;
+    border-width: 1px;
+    border-color: blue;
+}
