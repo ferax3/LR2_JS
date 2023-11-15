@@ -16,7 +16,12 @@ export class PointComponent {
     hy=0;
     r=0;
     Belong(x:number, y:number, r:number):boolean{
-        if(x>=-r && x<=r && y>=-r && y<=r && x*x+y*y>=r*r){
+        //if(x>=-r && x<=r && y>=-r && y<=r && x*x+y*y>=r*r)
+        if(
+            (x>=0 && y>=0 && x*x + y*y <= r*r)||//перша чверть
+            (x<=0 && y>=0 && y<=0.5*(x+r))||//друга чверть
+            (x>=0 && y<=0 && x<=0.5*r && y>=-r)//четверта чверть
+            ){
             return true;    
         }
         else
